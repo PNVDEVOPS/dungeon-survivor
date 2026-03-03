@@ -1,0 +1,14 @@
+{
+  "name": "Dungeon Survivor",
+  "slug": "dungeon-survivor",
+  "description": "Fantasy Bullet Hell Shooter - Survive waves of enemies in a dark dungeon! Upgrade heroes, weapons, and abilities.",
+  "instructions": "WASD/Arrows - Move | Mouse - Aim | Auto-fire enabled | Space/RMB - Special ability | R - Reload",
+  "category": "action",
+  "subcategory": "shooting",
+  "tags": ["bullet-hell", "survival", "roguelike", "fantasy", "pixel-art"],
+  "width": 960,
+  "height": 540,
+  "responsive": true,
+  "mobileReady": true,
+  "orientation": "landscape"
+}

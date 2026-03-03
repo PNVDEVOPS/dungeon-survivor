@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="description" content="Dungeon Survivor - Fantasy Bullet Hell Shooter. Survive waves of enemies, upgrade your hero and weapons!">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a0a12">
+<!-- Yandex Games -->
+<meta name="yandex-games" content="sdk">
+<!-- Open Graph -->
+<meta property="og:title" content="Dungeon Survivor">
+<meta property="og:description" content="Fantasy Bullet Hell Shooter">
+<meta property="og:type" content="game">
+<title>DUNGEON SURVIVOR</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- Yandex Games SDK (loaded conditionally) -->
+<script>
+  // Detect if running inside Yandex Games iframe
+  try {
+    if (window.location.hostname.includes('yandex') || document.referrer.includes('yandex')) {
+      let s = document.createElement('script');
+      s.src = 'https://yandex.ru/games/sdk/v2';
+      document.head.appendChild(s);
+    }
+  } catch(e) {}
+</script>
+<!-- CrazyGames SDK (loaded conditionally) -->
+<script>
+  try {
+    if (window.location.hostname.includes('crazygames') || document.referrer.includes('crazygames')) {
+      let s = document.createElement('script');
+      s.src = 'https://sdk.crazygames.com/crazygames-sdk-v3.js';
+      document.head.appendChild(s);
+    }
+  } catch(e) {}
+</script>
+</head>
+<body>
+<div id="menu">
+  <div class="mt">DUNGEON SURVIVOR</div>
+  <div class="ms">FANTASY × FIREPOWER</div>
+  <div class="cd" id="cdd">🪙 0</div>
+  <div class="abr"><button class="bb ad" id="acb" style="padding:4px 12px;font-size:9px">📺 +50🪙</button><div style="color:#4a5a6a;font-size:7px;margin-top:2px" id="alt"></div></div>
+  <div class="tabs"><div class="tab a" data-t="ch">ГЕРОИ</div><div class="tab" data-t="gn">ОРУЖИЕ</div><div class="tab" data-t="st">ПРОКАЧКА</div></div>
+  <div class="pn a" id="p-ch"><div class="cg" id="chg"></div></div>
+  <div class="pn" id="p-gn"><div class="cg" id="gng"></div></div>
+  <div class="pn" id="p-st" style="max-width:360px"><div id="stl"></div></div>
+  <button class="pb" id="pbtn">▶ ИГРАТЬ</button>
+  <button class="pb tbtn" id="tbtn">🧪 ТЕСТ РЕЖИМ</button>
+</div>
+<canvas id="G"></canvas>
+<div id="info"></div>
+<div id="xpb"><div id="xpf"></div></div>
+<div id="chud">🪙 0</div>
+<div id="ev"></div>
+<div id="evtint"></div>
+<div id="bbw"><div id="bn"></div><div id="bbg"><div id="bbf"></div></div></div>
+<div id="ls"><div id="lt">LEVEL UP!</div><div id="lc"></div></div>
+<div id="gs"><h1>ПОРАЖЕНИЕ</h1><div id="gst"></div><button class="gb cr" id="rvc">🪙 30 Воскрешение</button><button class="gb ar" id="rva">📺 Воскрешение</button><button class="gb" id="rmn">МЕНЮ</button></div>
+<div id="pauseMenu"><h2>ПАУЗА</h2><button class="gb" id="pm-resume">▶ ПРОДОЛЖИТЬ</button><button class="gb" id="pm-menu">🚪 В МЕНЮ</button></div>
+<div id="ao"><div class="at">📺 РЕКЛАМА</div><div class="ac" id="atm">5</div><div class="as">Подождите...</div></div>
+<div id="tl"><div class="ts" id="sm"><div class="tk" id="km"></div></div><div class="ts" id="sa"><div class="tk" id="ka"></div></div><div id="br">R</div></div>
+<div id="skillHud"></div>
+<div id="testPanel"></div>
+<div id="waveInfo"></div>
+<div id="fps"></div>
+<script src="js/sdk.js"></script>
+<script src="js/config.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
