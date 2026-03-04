@@ -231,7 +231,7 @@ const CONFIG = {
 
   // ===== PROC SKILLS =====
   PROCS: {
-    freeze:     { chance: 0.02, duration: 120, max: 3 },   // 8% chance to freeze on hit
+    freeze:     { chance: 0.08, duration: 120, max: 3 },   // 8% chance to freeze on hit
     execute:    { chance: 0.05, threshold: 0.15, max: 3 },  // 5% chance to instant-kill below 15% HP
     shockwave:  { chance: 0.06, radius: 60, dmgMult: 0.5, max: 3 }, // 6% chance AoE on hit
   },

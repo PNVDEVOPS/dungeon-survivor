@@ -217,7 +217,7 @@ const CONFIG = {
   CRATES: {
     weaponSpawnInterval: 21600, // frames between weapon crate spawns (~6 min)
     bonusSpawnInterval: 14400,  // frames between bonus crate spawns (~4 min)
-    pickupRadius: 25,           // must be within this distance
+    pickupRadius: 35,           // must be within this distance
     pickupTime: 180,            // frames to pickup (3 sec)
     weaponSpawnChance: 0.15,
     bonusSpawnChance: 0.2,
@@ -231,7 +231,7 @@ const CONFIG = {
 
   // ===== PROC SKILLS =====
   PROCS: {
-    freeze:     { chance: 0.02, duration: 120, max: 3 },   // 8% chance to freeze on hit
+    freeze:     { chance: 0.08, duration: 120, max: 3 },   // 8% chance to freeze on hit
     execute:    { chance: 0.05, threshold: 0.15, max: 3 },  // 5% chance to instant-kill below 15% HP
     shockwave:  { chance: 0.06, radius: 60, dmgMult: 0.5, max: 3 }, // 6% chance AoE on hit
   },

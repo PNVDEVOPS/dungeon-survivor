@@ -31,12 +31,12 @@ const CONFIG = {
   // rate = frames between shots, mag = magazine size, rld = reload frames
   // semiAuto: true = must click each shot (pistol behavior)
   WEAPONS: {
-    plasma_pistol:  { dm: 10, rate: 80, mag: 6, rld: 100,  spr: 0.05, spd: 7,  semiAuto: false },
+    plasma_pistol:  { dm: 8, rate: 50, mag: 6, rld: 50,  spr: 0.05, spd: 7,  semiAuto: false },
     arcane_rifle:   { dm: 10, rate: 50, mag: 8,  rld: 80,  spr: 0.03, spd: 9,  semiAuto: false },
     thunder_shotgun:{ dm: 4,  rate: 65, mag: 5,  rld: 90,  spr: 0.18, spd: 6,  semiAuto: false },
     frost_smg:      { dm: 3,  rate: 14, mag: 35, rld: 70,  spr: 0.12, spd: 7,  semiAuto: false },
     fire_launcher:  { dm: 14, rate: 72, mag: 6,  rld: 100, spr: 0.07, spd: 5,  semiAuto: false },
-    railgun:        { dm: 22, rate: 200, mag: 3,  rld: 200, spr: 0,    spd: 20, semiAuto: false },
+    railgun:        { dm: 22, rate: 90, mag: 3,  rld: 110, spr: 0,    spd: 20, semiAuto: false },
     void_cannon:    { dm: 25, rate: 100, mag: 3, rld: 120, spr: 0.04, spd: 3.5, semiAuto: false },
     minigun:        { dm: 3,  rate: 6,  mag: 80, rld: 115, spr: 0.19, spd: 8,  semiAuto: false },
   },
@@ -53,7 +53,7 @@ const CONFIG = {
   // ===== ENEMIES =====
   // hp, spd, xp, dm, shoots (bool), shootCD (frames)
   ENEMIES: {
-    slime:      { r: 10, spd: 0.95, hp: 40,  xp: 1, dm: 8 },
+    slime:      { r: 10, spd: 0.95, hp: 45,  xp: 1, dm: 8 },
     bat:        { r: 8,  spd: 1.65, hp: 25,  xp: 1, dm: 6 },
     skeleton:   { r: 11, spd: 1.05, hp: 65,  xp: 2, dm: 10 },
     spider:     { r: 9,  spd: 1.45, hp: 35,  xp: 1, dm: 7 },
@@ -129,7 +129,7 @@ const CONFIG = {
     hpScalePerWave: 0.12,
 
     // Boss every N waves
-    bossEveryN: 8,
+    bossEveryN: 4,
 
     // Difficulty spikes: at these waves, spawn rate drops and enemy count jumps
     spikes: [
@@ -145,7 +145,7 @@ const CONFIG = {
     damage:    { value: 0.10, max: 10 },  // +10% per level
     speed:     { value: 0.06, max: 6 },   // +6% per level
     health:    { value: 20,   max: 5 },    // +20 HP per level
-    regen:     { value: 0.2,    max: 5 },    // +0.2 HP/sec per level
+    regen:     { value: 2,    max: 5 },    // +2 HP/sec per level
     armor:     { value: 1,    max: 5 },    // +1 armor per level
     crit:      { value: 0.06, max: 6 },    // +6% crit per level
     magnet:    { value: 20,   max: 6 },    // +20 radius per level
@@ -190,7 +190,7 @@ const CONFIG = {
 
   // ===== EVENTS =====
   EVENTS: {
-    triggerInterval: 3400,   // Frames between event checks
+    triggerInterval: 2400,   // Frames between event checks
     triggerChance: 0.65,     // Chance to trigger
     minWave: 3,              // Minimum wave for events
     goldRushCoinMult: 3,
@@ -217,7 +217,7 @@ const CONFIG = {
   CRATES: {
     weaponSpawnInterval: 21600, // frames between weapon crate spawns (~6 min)
     bonusSpawnInterval: 14400,  // frames between bonus crate spawns (~4 min)
-    pickupRadius: 25,           // must be within this distance
+    pickupRadius: 35,           // must be within this distance
     pickupTime: 180,            // frames to pickup (3 sec)
     weaponSpawnChance: 0.15,
     bonusSpawnChance: 0.2,
@@ -231,7 +231,7 @@ const CONFIG = {
 
   // ===== PROC SKILLS =====
   PROCS: {
-    freeze:     { chance: 0.02, duration: 120, max: 3 },   // 8% chance to freeze on hit
+    freeze:     { chance: 0.08, duration: 120, max: 3 },   // 8% chance to freeze on hit
     execute:    { chance: 0.05, threshold: 0.15, max: 3 },  // 5% chance to instant-kill below 15% HP
     shockwave:  { chance: 0.06, radius: 60, dmgMult: 0.5, max: 3 }, // 6% chance AoE on hit
   },
