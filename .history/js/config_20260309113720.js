@@ -20,25 +20,25 @@ const CONFIG = {
 
   // ===== CHARACTERS =====
   CHARACTERS: {
-    knight: { hp: 120, spd: 9.3, arm: 3, dm: 1, block: 0.15, abilityCD: 1420 },
-    mage:   { hp: 80, spd: 9.5, arm: 0, dm: 1.2, expBonus: 1.3, abilityCD: 1480 },
-    ranger: { hp: 100, spd: 9.1, arm: 1, dm: 1.05, cdBonus: 0.85, abilityCD: 1240 },
-    necro:  { hp: 80, spd: 9.3, arm: 0, dm: 1.1, vamp: 0.05, abilityCD: 1360 },
-    cyborg: { hp: 100, spd: 9.7, arm: 2, dm: 1.08, shieldMax: 30, shieldCD: 720, abilityCD: 1540 },
+    knight: { hp: 120, spd: 3.3, arm: 3, dm: 1, block: 0.15, abilityCD: 1420 },
+    mage:   { hp: 80, spd: 2.5, arm: 0, dm: 1.2, expBonus: 1.3, abilityCD: 1480 },
+    ranger: { hp: 100, spd: 3.1, arm: 1, dm: 1.05, cdBonus: 0.85, abilityCD: 1240 },
+    necro:  { hp: 80, spd: 2.3, arm: 0, dm: 1.1, vamp: 0.05, abilityCD: 1360 },
+    cyborg: { hp: 100, spd: 2.7, arm: 2, dm: 1.08, shieldMax: 30, shieldCD: 720, abilityCD: 1540 },
   },
 
   // ===== WEAPONS =====
   // rate = frames between shots, mag = magazine size, rld = reload frames
   // semiAuto: true = must click each shot (pistol behavior)
   WEAPONS: {
-    plasma_pistol:  { dm: 15, rate: 60, mag: 6, rld: 100,  spr: 0.05, spd: 11,  semiAuto: false },
-    arcane_rifle:   { dm: 10, rate: 50, mag: 8,  rld: 80,  spr: 0.03, spd: 14,  semiAuto: false },
-    thunder_shotgun:{ dm: 4,  rate: 65, mag: 5,  rld: 90,  spr: 0.18, spd: 10,  semiAuto: false },
-    frost_smg:      { dm: 3,  rate: 14, mag: 35, rld: 70,  spr: 0.12, spd: 11,  semiAuto: false },
-    fire_launcher:  { dm: 10, rate: 72, mag: 6,  rld: 100, spr: 0.07, spd: 8,   semiAuto: false },
-    railgun:        { dm: 22, rate: 200, mag: 3,  rld: 200, spr: 0,    spd: 28,  semiAuto: false },
-    void_cannon:    { dm: 25, rate: 100, mag: 3, rld: 120, spr: 0.04, spd: 6,   semiAuto: false },
-    minigun:        { dm: 3,  rate: 6,  mag: 80, rld: 115, spr: 0.19, spd: 12,  semiAuto: false },
+    plasma_pistol:  { dm: 15, rate: 80, mag: 6, rld: 100,  spr: 0.05, spd: 7,  semiAuto: false },
+    arcane_rifle:   { dm: 10, rate: 50, mag: 8,  rld: 80,  spr: 0.03, spd: 9,  semiAuto: false },
+    thunder_shotgun:{ dm: 4,  rate: 65, mag: 5,  rld: 90,  spr: 0.18, spd: 6,  semiAuto: false },
+    frost_smg:      { dm: 3,  rate: 14, mag: 35, rld: 70,  spr: 0.12, spd: 7,  semiAuto: false },
+    fire_launcher:  { dm: 14, rate: 72, mag: 6,  rld: 100, spr: 0.07, spd: 5,  semiAuto: false },
+    railgun:        { dm: 22, rate: 200, mag: 3,  rld: 200, spr: 0,    spd: 20, semiAuto: false },
+    void_cannon:    { dm: 25, rate: 100, mag: 3, rld: 120, spr: 0.04, spd: 3.5, semiAuto: false },
+    minigun:        { dm: 3,  rate: 6,  mag: 80, rld: 115, spr: 0.19, spd: 8,  semiAuto: false },
   },
 
   // Weapon upgrade per level
@@ -53,14 +53,14 @@ const CONFIG = {
   // ===== ENEMIES =====
   // hp, spd, xp, dm, shoots (bool), shootCD (frames)
   ENEMIES: {
-    slime:      { r: 10, spd: 2.15, hp: 40,  xp: 1, dm: 8 },
-    bat:        { r: 8,  spd: 2.45, hp: 25,  xp: 1, dm: 6 },
-    skeleton:   { r: 11, spd: 2.15, hp: 65,  xp: 2, dm: 10 },
-    spider:     { r: 9,  spd: 2.85, hp: 35,  xp: 1, dm: 7 },
+    slime:      { r: 10, spd: 2.95, hp: 40,  xp: 1, dm: 8 },
+    bat:        { r: 8,  spd: 3.65, hp: 25,  xp: 1, dm: 6 },
+    skeleton:   { r: 11, spd: 2.05, hp: 65,  xp: 2, dm: 10 },
+    spider:     { r: 9,  spd: 3.45, hp: 35,  xp: 1, dm: 7 },
     orc:        { r: 14, spd: 1.72, hp: 140, xp: 3, dm: 14 },
     mage_e:     { r: 11, spd: 1.78, hp: 75,  xp: 3, dm: 10, shoots: true, shootCD: 100 },
     ghost:      { r: 12, spd: 2.2,  hp: 55,  xp: 2, dm: 9, isGhost: true },
-    demon:      { r: 13, spd: 2.45, hp: 120, xp: 4, dm: 12, shoots: true, shootCD: 85 },
+    demon:      { r: 13, spd: 2.95, hp: 120, xp: 4, dm: 12, shoots: true, shootCD: 85 },
     golem:      { r: 18, spd: 1.48, hp: 250, xp: 5, dm: 18 },
     dragon:     { r: 15, spd: 2.0,  hp: 170, xp: 5, dm: 16, shoots: true, shootCD: 80 },
     // --- NEW ENEMIES ---
@@ -71,17 +71,17 @@ const CONFIG = {
     necro_e:    { r: 12, spd: 1.65, hp: 90,  xp: 5, dm: 8, isNecromancer: true, summonCD: 180, summonType: 'skeleton', summonCount: 2 },
     worm:       { r: 7,  spd: 3.15, hp: 20,  xp: 1, dm: 5, isWorm: true, splitCount: 2 },
     harpy:      { r: 10, spd: 4.2,  hp: 30,  xp: 2, dm: 8 },
-    giant:      { r: 32, spd: 1.35, hp: 800, xp: 10, dm: 25 },
+    giant:      { r: 32, spd: 0.35, hp: 800, xp: 10, dm: 25 },
   },
 
   // Elite enemy multipliers
   ELITE: {
-    radiusMult: 2.35,
-    hpMult: 3.5,
-    dmgMult: 2.8,
+    radiusMult: 1.35,
+    hpMult: 2.5,
+    dmgMult: 1.8,
     xpMult: 3,
     chance: 0.30,         // Chance per spawn during elite wave
-    spdMult: 3.15,        // Elites are slightly faster
+    spdMult: 1.15,        // Elites are slightly faster
   },
 
   // ===== BOSSES =====

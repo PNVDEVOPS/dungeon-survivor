@@ -54,13 +54,13 @@ const CONFIG = {
   // hp, spd, xp, dm, shoots (bool), shootCD (frames)
   ENEMIES: {
     slime:      { r: 10, spd: 2.15, hp: 40,  xp: 1, dm: 8 },
-    bat:        { r: 8,  spd: 2.45, hp: 25,  xp: 1, dm: 6 },
-    skeleton:   { r: 11, spd: 2.15, hp: 65,  xp: 2, dm: 10 },
+    bat:        { r: 8,  spd: 2.95, hp: 25,  xp: 1, dm: 6 },
+    skeleton:   { r: 11, spd: 2.05, hp: 65,  xp: 2, dm: 10 },
     spider:     { r: 9,  spd: 2.85, hp: 35,  xp: 1, dm: 7 },
     orc:        { r: 14, spd: 1.72, hp: 140, xp: 3, dm: 14 },
     mage_e:     { r: 11, spd: 1.78, hp: 75,  xp: 3, dm: 10, shoots: true, shootCD: 100 },
     ghost:      { r: 12, spd: 2.2,  hp: 55,  xp: 2, dm: 9, isGhost: true },
-    demon:      { r: 13, spd: 2.45, hp: 120, xp: 4, dm: 12, shoots: true, shootCD: 85 },
+    demon:      { r: 13, spd: 2.95, hp: 120, xp: 4, dm: 12, shoots: true, shootCD: 85 },
     golem:      { r: 18, spd: 1.48, hp: 250, xp: 5, dm: 18 },
     dragon:     { r: 15, spd: 2.0,  hp: 170, xp: 5, dm: 16, shoots: true, shootCD: 80 },
     // --- NEW ENEMIES ---
